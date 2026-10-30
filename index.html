@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hev Store - Simulador de Compras</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ===== CABEÇALHO ===== -->
+    <header>
+        <a href="#" class="logo">Hev Store</a>
+        <div id="icone-carrinho">
+            <img src="images/hamburguer.svg" alt="Abrir carrinho" class="icone-img">
+            <span class="contador-carrinho"></span>
+        </div>
+    </header>
+
+    <!-- ===== CARRINHO (painel lateral) ===== -->
+    <div class="carrinho">
+        <h2 class="carrinho-titulo">Meu carrinho</h2>
+        <div class="carrinho-conteudo">
+            <!-- Os itens são adicionados aqui pelo JavaScript -->
+        </div>
+        <div class="total">
+            <div class="total-titulo">Total da Compra</div>
+            <div class="total-preco">R$ 0,00</div>
+        </div>
+        <button class="btn-comprar">Comprar</button>
+        <i class="ri-close-line" id="fechar-carrinho"></i>
+    </div>
+
+   
+    <section class="apresentacao">
+        <h1 class="titulo-loja">Hev Store</h1>
+        <p class="descricao-loja">
+            Hamburgueria artesanal com pão macio, carne suculenta e aquele toque nordestino.
+            Escolha seus favoritos e simule sua compra no botão ou no carrinho!
+        </p>
+
+        <div class="instrucoes">
+            <h2>Como usar</h2>
+            <ol>
+                <li>Clique no botão <strong>"Simular compra"</strong>.</li>
+                <li>Digite a quantidade desejada de cada hambúrguer (digite <strong>0</strong> para não comprar).</li>
+                <li>Confira o resumo com as quantidades, o valor de cada produto e o total.</li>
+            </ol>
+            <p>Você também pode montar seu pedido pelo ícone de sacola de cada produto e ver o carrinho no ícone do topo.</p>
+        </div>
+
+        <button class="btn-simular" onclick="simularCompra()">Simular compra</button>
+    </section>
+
+    <!-- cadastro de produtos  -->
+    <section class="loja">
+        <h2 class="secao-titulo">Produtos Disponíveis</h2>
+        <div class="produtos">
+
+            <div class="produto">
+                <div class="produto-img">
+                    <img src="images/produto1.jpg" alt="Triplo Carne e Cheddar">
+                </div>
+                <h3 class="produto-titulo">Triplo Carne e Cheddar</h3>
+                <p class="produto-descricao">Três carnes com muito cheddar derretido.</p>
+                <div class="preco-e-sacola">
+                    <span class="preco" data-preco="50">R$ 50,00</span>
+                    <i class="ri-shopping-bag-line adicionar-carrinho"></i>
+                </div>
+            </div>
+
+            <div class="produto">
+                <div class="produto-img">
+                    <img src="images/produto2.jpg" alt="Salada, Bacon e Cheddar">
+                </div>
+                <h3 class="produto-titulo">Salada, Bacon e Cheddar</h3>
+                <p class="produto-descricao">Carne, bacon crocante, cheddar, alface e tomate.</p>
+                <div class="preco-e-sacola">
+                    <span class="preco" data-preco="30">R$ 30,00</span>
+                    <i class="ri-shopping-bag-line adicionar-carrinho"></i>
+                </div>
+            </div>
+
+            <div class="produto">
+                <div class="produto-img">
+                    <img src="images/produto3.jpg" alt="Cebola Caramelizada e Picles">
+                </div>
+                <h3 class="produto-titulo">Cebola Caramelizada e Picles</h3>
+                <p class="produto-descricao">Carne com cebola caramelizada, picles e molho da casa.</p>
+                <div class="preco-e-sacola">
+                    <span class="preco" data-preco="35">R$ 35,00</span>
+                    <i class="ri-shopping-bag-line adicionar-carrinho"></i>
+                </div>
+            </div>
+
+            <div class="produto">
+                <div class="produto-img">
+                    <img src="images/produto4.jpg" alt="Duplo Queijo e Bacon">
+                </div>
+                <h3 class="produto-titulo">Duplo Queijo e Bacon</h3>
+                <p class="produto-descricao">Duas carnes, queijo em dobro e bacon crocante.</p>
+                <div class="preco-e-sacola">
+                    <span class="preco" data-preco="45">R$ 45,00</span>
+                    <i class="ri-shopping-bag-line adicionar-carrinho"></i>
+                </div>
+            </div>
+
+            <div class="produto">
+                <div class="produto-img">
+                    <img src="images/produto6.jpg" alt="Podrão X Tudo">
+                </div>
+                <h3 class="produto-titulo">Podrão X Tudo</h3>
+                <p class="produto-descricao">O completão: carne, ovo, presunto, queijo, bacon, salada e batata palha.</p>
+                <div class="preco-e-sacola">
+                    <span class="preco" data-preco="40">R$ 40,00</span>
+                    <i class="ri-shopping-bag-line adicionar-carrinho"></i>
+                </div>
+            </div>
+
+            <div class="produto">
+                <div class="produto-img">
+                    <img src="images/produto7.jpg" alt="Frango com Salada">
+                </div>
+                <h3 class="produto-titulo">Frango com Salada</h3>
+                <p class="produto-descricao">Filé de frango grelhado com alface, tomate e maionese temperada.</p>
+                <div class="preco-e-sacola">
+                    <span class="preco" data-preco="30">R$ 30,00</span>
+                    <i class="ri-shopping-bag-line adicionar-carrinho"></i>
+                </div>
+            </div>
+
+            <div class="produto">
+                <div class="produto-img">
+                    <img src="images/produto8.jpg" alt="Carne e Queijo Coalho">
+                </div>
+                <h3 class="produto-titulo">Carne e Queijo Coalho</h3>
+                <p class="produto-descricao">Carne com queijo coalho na chapa e um fio de melaço de cana.</p>
+                <div class="preco-e-sacola">
+                    <span class="preco" data-preco="40">R$ 40,00</span>
+                    <i class="ri-shopping-bag-line adicionar-carrinho"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape">
+        <p><strong>Hevila Sousa de Freitas</strong></p>
+        <p>Trilha Desenvolvimento Mobile 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
