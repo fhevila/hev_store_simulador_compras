@@ -45,7 +45,7 @@ Também há um **carrinho lateral**: o usuário adiciona produtos pelo ícone de
 
 1. Baixe ou clone o repositório:
    ```bash
-   git clone https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git
+   git clone https://github.com/fhevila/hev_store_simulador_compras.git
    ```
 2. Abra a pasta do projeto.
 3. Dê dois cliques no arquivo **`index.html`** para abrir no navegador.
