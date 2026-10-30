@@ -1,6 +1,6 @@
 # Hev Store – Simulador de Compras
 
-**Aluna:** Hevila Sousa de Freitas
+**Aluna:** Hevila Freitas
 **Trilha:** Desenvolvimento Mobile – Programa Trilhas 2026
 **Atividade:** Desafio 1 – Minha Loja: Simulador de Compras
 
